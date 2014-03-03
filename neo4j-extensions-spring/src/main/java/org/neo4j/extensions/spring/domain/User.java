@@ -38,7 +38,7 @@ public class User {
     /**
      * Auto-generated unique identifier.
      */
-    @Indexed(indexType = IndexType.UNIQUE, indexName = "uids", numeric = false)
+    @Indexed(indexType = IndexType.SIMPLE, indexName = "uids", numeric = false,unique=true)
     private String uid;
 
     @CreatedDate
@@ -71,7 +71,7 @@ public class User {
 
     private Boolean validated;
 
-    @Indexed(indexType = IndexType.UNIQUE, indexName = "identifiers", numeric = false)
+    @Indexed(indexType = IndexType.SIMPLE, indexName = "identifiers", numeric = false,unique=true)
     private String identifier;
 
 
